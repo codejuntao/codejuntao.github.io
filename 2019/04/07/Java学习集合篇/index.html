@@ -5,15 +5,25 @@
   
 
   
-  <title>涛从白马来</title>
+  <title>Java学习集合篇 | 涛从白马来</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="涛从白马来">
-<meta property="og:url" content="https://codejuntao.github.io/index.html">
+  <meta name="description" content="一、Collection 单列集合Collection 作为单列集合的根接口，子接口List 和 Set 接口均继承父类 Collection 接口。 1、List 集合接口下的子类在List接口下，我们常用的子类有三个，分别是ArrayList、LinkedList 和 Vector，List 集合中元素是有序的，存和取的顺序一致，有索引，可以存储重复元素。 2.1 ArrayList（优先">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java学习集合篇">
+<meta property="og:url" content="https://codejuntao.github.io/2019/04/07/Java学习集合篇/index.html">
 <meta property="og:site_name" content="涛从白马来">
+<meta property="og:description" content="一、Collection 单列集合Collection 作为单列集合的根接口，子接口List 和 Set 接口均继承父类 Collection 接口。 1、List 集合接口下的子类在List接口下，我们常用的子类有三个，分别是ArrayList、LinkedList 和 Vector，List 集合中元素是有序的，存和取的顺序一致，有索引，可以存储重复元素。 2.1 ArrayList（优先">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://codejuntao.github.io/.io//C:%5CUsers%5CJUNTAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568449676125.png">
+<meta property="og:image" content="https://codejuntao.github.io/.io//C:%5CUsers%5CJUNTAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568451760634.png">
+<meta property="og:image" content="https://codejuntao.github.io/.io//C:%5CUsers%5CJUNTAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568451909949.png">
+<meta property="og:image" content="https://codejuntao.github.io/.io//C:%5CUsers%5CJUNTAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568630049253.png">
+<meta property="og:image" content="https://codejuntao.github.io/.io//C:%5CUsers%5CJUNTAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568452042453.png">
+<meta property="og:updated_time" content="2019-10-20T05:34:06.561Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="涛从白马来">
+<meta name="twitter:title" content="Java学习集合篇">
+<meta name="twitter:description" content="一、Collection 单列集合Collection 作为单列集合的根接口，子接口List 和 Set 接口均继承父类 Collection 接口。 1、List 集合接口下的子类在List接口下，我们常用的子类有三个，分别是ArrayList、LinkedList 和 Vector，List 集合中元素是有序的，存和取的顺序一致，有索引，可以存储重复元素。 2.1 ArrayList（优先">
+<meta name="twitter:image" content="https://codejuntao.github.io/.io//C:%5CUsers%5CJUNTAO%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1568449676125.png">
   
     <link rel="alternate" href="/atom.xml" title="涛从白马来" type="application/atom+xml">
   
@@ -60,99 +70,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Java学习Redis篇" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/08/07/Java学习Redis篇/" class="article-date">
-  <time datetime="2019-08-07T13:30:19.000Z" itemprop="datePublished">2019-08-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/07/Java学习Redis篇/">Java学习Redis篇</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Redis是什么？"><a href="#Redis是什么？" class="headerlink" title="Redis是什么？"></a><strong>Redis是什么？</strong></h3><p>Redis 是用 C 语言开发的一个开源的高性能键值对（key-value）数据库,非关系型数据库，并提供多种<em>语言</em>的<em>API</em>。</p>
-<h3 id="默认端口？默认过期时间？默认支持多大value？"><a href="#默认端口？默认过期时间？默认支持多大value？" class="headerlink" title="默认端口？默认过期时间？默认支持多大value？"></a>默认端口？默认过期时间？默认支持多大value？</h3><p>6379</p>
-<p>不会过期。<br>但是这样说有点绝对。一般情况是这样，当你配置中开启了超出最大内存限制就写磁盘的话，那么这些没有设置过期时间的key可能会被写到磁盘上。</p>
-<p>redis的key和string类型value限制均为512MB。</p>
-<h3 id="怎么统计缓存命中率？"><a href="#怎么统计缓存命中率？" class="headerlink" title="怎么统计缓存命中率？"></a>怎么统计缓存命中率？</h3><p><a href="http://lib.csdn.net/base/redis" target="_blank" rel="noopener">Redis</a>提供了INFO这个命令，能够随时监控服务器的状态，通过计算hits和miss，我们可以得到缓存的命中率。</p>
-<h3 id="使用redis有哪些好处？"><a href="#使用redis有哪些好处？" class="headerlink" title="使用redis有哪些好处？"></a><strong>使用redis有哪些好处？</strong></h3><p>(1) 速度快，因为数据存在内存中，类似于HashMap，HashMap的优势就是查找和操作的时间复杂度都是O(1)</p>
-<p>(2) 支持丰富数据类型，支持string，list，set，sorted set，hash</p>
-<p>(3) 丰富的特性：可用于缓存，消息，按key设置过期时间，过期后将会自动删除</p>
-<p>(4) 可以持久化数据:</p>
-<p>​        Redis 持久化的两种方式： </p>
-<p>​        1) RDB 格式：Redis DataBase，每过一段时间将内存中的数据写到硬盘上 </p>
-<p>​        2) AOF 格式：Append Only File，以日志的方式记录服务器上的每个操作，当服务器重启的时候，将日志中操作还原到内存中。</p>
-<p>RDB 持久化机制优点:</p>
-<p>1) 方便备份与恢复 </p>
-<p>整个 Redis 数据库将只包含一个文件，默认是 dump.rdb，这对于文件备份和恢复而言是非常完美的。因为我 们可以非常轻松的将一个单独的文件压缩后再转移到其它储介质上。一旦系统出现灾难性故障，我们可以非常 容易的进行恢复。 </p>
-<p>2) 性能最大化 </p>
-<p>对于 Redis 的服务进程而言，在开始持久化时，它唯一需要做的只是分叉出子进程，由子进程完成这些持久 化的工作，这样就可以极大的避免服务进程执行 IO 操作了。 </p>
-<p>3) 启动效率更高 </p>
-<p>相比于 AOF 机制，如果数据集很大，RDB 的启动效率会更高</p>
-<h3 id="使用redis有什么缺点？"><a href="#使用redis有什么缺点？" class="headerlink" title="使用redis有什么缺点？"></a>使用redis有什么缺点？</h3><p>主要是四个问题<br>(一)缓存和数据库双写一致性问题<br>(二)缓存雪崩问题<br>(三)缓存击穿问题<br>(四)缓存的并发竞争问题</p>
-<h3 id="redis的数据类型，以及每种数据类型的使用场景"><a href="#redis的数据类型，以及每种数据类型的使用场景" class="headerlink" title="redis的数据类型，以及每种数据类型的使用场景?"></a><strong>redis的数据类型，以及每种数据类型的使用场景?</strong></h3><p>(一)String<br>最常规的set/get操作，value可以是String也可以是数字。一般做一些复杂的计数功能的缓存。</p>
-<p>(二)hash<br>这里value存放的是结构化的对象，比较方便的就是操作其中的某个字段。博主在做单点登录的时候，就是用这种数据结构存储用户信息，以cookieId作为key，设置30分钟为缓存过期时间，能很好的模拟出类似session的效果。</p>
-<p>(三)list<br>使用List的数据结构，可以做简单的消息队列的功能。另外还有一个就是，可以利用lrange命令，做基于redis的分页功能，性能极佳，用户体验好。</p>
-<p>(四)set<br>因为set堆放的是一堆不重复值的集合。所以可以做全局去重的功能。为什么不用JVM自带的Set进行去重？因为我们的系统一般都是集群部署，使用JVM自带的Set，比较麻烦，难道为了一个做一个全局去重，再起一个公共服务，太麻烦了。<br>另外，就是利用交集、并集、差集等操作，可以计算共同喜好，全部的喜好，自己独有的喜好等功能。</p>
-<p>(五)sorted set</p>
-<p>sorted set多了一个权重参数score,集合中的元素能够按score进行排列。可以做排行榜应用，取TOP N操作。另外，参照另一篇《分布式之延时任务方案解析》，该文指出了sorted set可以用来做延时任务。最后一个应用就是可以做范围查找。</p>
-<h3 id="为什么使用Redis？"><a href="#为什么使用Redis？" class="headerlink" title="为什么使用Redis？"></a><strong>为什么使用Redis？</strong></h3><p>在项目中使用redis，主要是从两个角度去考虑:性能和并发。</p>
-<p>（一）性能</p>
-<p>我们在碰到需要执行耗时特别久，且结果不频繁变动的SQL，就特别适合将运行结果放入缓存。当然，redis还具备可以做分布式锁等其他功能，但是如果只是为了分布式锁这些其他功能，完全还有其他中间件(如zookpeer等)代替，并不是非要使用redis。</p>
-<p>我们在碰到需要执行耗时特别久，且结果不频繁变动的SQL，就特别适合将运行结果放入缓存。这样，后面的请求就去缓存中读取，使得请求能够迅速响应。</p>
-<p>（二）并发</p>
-<p>在大并发的情况下，所有的请求直接访问数据库，数据库会出现连接异常。这个时候，就需要使用redis做一个缓冲操作，让请求先访问到redis，而不是直接访问数据库。</p>
-<h3 id="单线程的redis为什么这么快？"><a href="#单线程的redis为什么这么快？" class="headerlink" title="单线程的redis为什么这么快？"></a><strong>单线程的redis为什么这么快？</strong></h3><p>(一)纯内存操作<br>(二)单线程操作，避免了频繁的上下文切换<br>(三)采用了非阻塞I/O多路复用机制</p>
-<h3 id="redis的过期策略以及内存淘汰机制"><a href="#redis的过期策略以及内存淘汰机制" class="headerlink" title="redis的过期策略以及内存淘汰机制?"></a><strong>redis的过期策略以及内存淘汰机制?</strong></h3><p>redis采用的是定期删除+惰性删除策略。</p>
-<p>为什么不用定时删除策略?<br>定时删除,用一个定时器来负责监视key,过期则自动删除。虽然内存及时释放，但是十分消耗CPU资源。在大并发请求下，CPU要将时间应用在处理请求，而不是删除key,因此没有采用这一策略.</p>
-<p>定期删除+惰性删除是如何工作的呢?<br>定期删除，redis默认每个100ms检查，是否有过期的key,有过期key则删除。需要说明的是，redis不是每个100ms将所有的key检查一次，而是随机抽取进行检查(如果每隔100ms,全部key进行检查，redis岂不是卡死)。因此，如果只采用定期删除策略，会导致很多key到时间没有删除。<br>于是，惰性删除派上用场。也就是说在你获取某个key的时候，redis会检查一下，这个key如果设置了过期时间那么是否过期了？如果过期了此时就会删除。</p>
-<p>采用定期删除+惰性删除就没其他问题了么?<br>不是的，如果定期删除没删除key。然后你也没即时去请求key，也就是说惰性删除也没生效。这样，redis的内存会越来越高。那么就应该采用内存淘汰机制。</p>
-<h3 id="redis和数据库双写一致性问题"><a href="#redis和数据库双写一致性问题" class="headerlink" title="redis和数据库双写一致性问题?"></a>redis和数据库双写一致性问题?</h3><p>从理论上说，只要我们设置了键的过期时间，我们就能保证缓存和数据库的数据最终是一致的。因为只要缓存数据过期了，就会被删除。随后读的时候，因为缓存里没有，就可以查数据库的数据，然后将数据库查出来的数据写入到缓存中。</p>
-<p>除了设置过期时间，我们还需要做更多的措施来尽量避免数据库与缓存处于不一致的情况发生。</p>
-<p>采取正确更新策略，先更新数据库，再删缓存。其次，因为可能存在删除缓存失败的问题，提供一个补偿措施即可，例如利用消息队列。</p>
-<h3 id="如何应对缓存穿透和缓存雪崩问题"><a href="#如何应对缓存穿透和缓存雪崩问题" class="headerlink" title="如何应对缓存穿透和缓存雪崩问题?"></a>如何应对缓存穿透和缓存雪崩问题?</h3><p>缓存穿透，即黑客故意去请求缓存中不存在的数据，导致所有的请求都怼到数据库上，从而数据库连接异常。</p>
-<p>解决方案:<br>(一)利用互斥锁，缓存失效的时候，先去获得锁，得到锁了，再去请求数据库。没得到锁，则休眠一段时间重试<br>(二)采用异步更新策略，无论key是否取到值，都直接返回。value值中维护一个缓存失效时间，缓存如果过期，异步起一个线程去读数据库，更新缓存。需要做缓存预热(项目启动前，先加载缓存)操作。<br>(三)提供一个能迅速判断请求是否有效的拦截机制，比如，利用布隆过滤器，内部维护一系列合法有效的key。迅速判断出，请求所携带的Key是否合法有效。如果不合法，则直接返回。</p>
-<p>缓存雪崩，即缓存同一时间大面积的失效，这个时候又来了一波请求，结果请求都怼到数据库上，从而导致数据库连接异常。</p>
-<p>解决方案:<br>(一)给缓存的失效时间，加上一个随机值，避免集体失效。<br>(二)使用互斥锁，但是该方案吞吐量明显下降了。<br>(三)双缓存。我们有两个缓存，缓存A和缓存B。缓存A的失效时间为20分钟，缓存B不设失效时间。自己做缓存预热操作。然后细分以下几个小点</p>
-<ul>
-<li>I 从缓存A读数据库，有则直接返回</li>
-<li>II A没有数据，直接从B读数据，直接返回，并且异步启动一个更新线程。</li>
-<li>III 更新线程同时更新缓存A和缓存B。</li>
-</ul>
-<h3 id="如何解决redis的并发竞争key问题"><a href="#如何解决redis的并发竞争key问题" class="headerlink" title="如何解决redis的并发竞争key问题?"></a>如何解决redis的并发竞争key问题?</h3><p>(1)如果对这个key操作，不要求顺序<br>这种情况下，准备一个分布式锁，大家去抢锁，抢到锁就做set操作即可，比较简单。<br>(2)如果对这个key操作，要求顺序<br>假设有一个key1,系统A需要将key1设置为valueA,系统B需要将key1设置为valueB,系统C需要将key1设置为valueC.<br>期望按照key1的value值按照 valueA–&gt;valueB–&gt;valueC的顺序变化。这种时候我们在数据写入数据库的时候，需要保存一个时间戳。假设时间戳如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">系统A key 1 &#123;valueA  3:00&#125;</span><br><span class="line">系统B key 1 &#123;valueB  3:05&#125;</span><br><span class="line">系统C key 1 &#123;valueC  3:10&#125;</span><br></pre></td></tr></table></figure>
-
-<p>那么，假设这会系统B先抢到锁，将key1设置为{valueB 3:05}。接下来系统A抢到锁，发现自己的valueA的时间戳早于缓存中的时间戳，那就不做set操作了。以此类推。</p>
-<p>其他方法，比如利用队列，将set方法变成串行访问也可以。总之，灵活变通。</p>
-<h3 id><a href="#" class="headerlink" title=" "></a> </h3>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://codejuntao.github.io/2019/08/07/Java学习Redis篇/" data-id="ck1ykbu6b0002n8jiji5d249k" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Java学习集合篇" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Java学习集合篇" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/04/07/Java学习集合篇/" class="article-date">
   <time datetime="2019-04-07T14:46:43.000Z" itemprop="datePublished">2019-04-07</time>
@@ -165,8 +83,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/07/Java学习集合篇/">Java学习集合篇</a>
+    <h1 class="article-title" itemprop="name">
+      Java学习集合篇
     </h1>
   
 
@@ -233,85 +151,28 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-我的第一篇博客文章" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/04/05/我的第一篇博客文章/" class="article-date">
-  <time datetime="2019-04-05T12:38:20.000Z" itemprop="datePublished">2019-04-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2019/08/07/Java学习Redis篇/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
+          Java学习Redis篇
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/05/我的第一篇博客文章/">我的第一篇博客文章</a>
-    </h1>
   
+    <a href="/2019/04/05/我的第一篇博客文章/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">我的第一篇博客文章</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>第一次使用hexo+github搭建个人博客，所以第一篇博客文章就写一下具体是如何搭建的。</p>
-<h2 id="1-准备搭建环境"><a href="#1-准备搭建环境" class="headerlink" title="1.准备搭建环境"></a>1.准备搭建环境</h2><h3 id="1-1安装node-js"><a href="#1-1安装node-js" class="headerlink" title="1.1安装node.js"></a>1.1安装node.js</h3><p>官网：<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">http://nodejs.cn/download/</a></p>
-<p>可以根据不同平台系统选择需要的 Node.js 安装包。按照默认配置安装即可。</p>
-<h3 id="1-2安装git"><a href="#1-2安装git" class="headerlink" title="1.2安装git"></a>1.2安装git</h3><p>官网：<a href="https://git-scm.com/" target="_blank" rel="noopener">https://git-scm.com/</a></p>
-<p>Windows系统安装git过程中<strong>Configuring extra options</strong>的选项<strong>Enable Git Credential Manager</strong>(启用Git凭证管理器)需要NET Framework v4.5.1或更高版本。</p>
-<h2 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2.安装hexo"></a>2.安装hexo</h2><p>Windows系统下打开命令行，执行以下命令</p>
-<p>选择安装淘宝镜像速度会比npm快很多</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p>自动安装hexo框架</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p>显示版本号，显示出版本号就说明安装成功</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-
-<p>选择一个文件夹作为博客的根目录，进入该目录执行命令初始化hexo</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
-<p>在本地博客根目录下执行命令启动博客进行测试，默认<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-部署到github"><a href="#3-部署到github" class="headerlink" title="3.部署到github"></a>3.部署到github</h2><p>登录github</p>
-<p>新建一个仓库，项目名必须以<code>用户名.github.io</code>的形式命名</p>
-<p>修改在本地博客根目录下的配置文件_config.yml,冒号后面都要跟一个空格。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/codejuntao/codejuntao.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>执行命令发布到github，这里git要先配置好username和email</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>这样就搭建完成了，接下来就可以发表文章</p>
-<h2 id="4-发布文章"><a href="#4-发布文章" class="headerlink" title="4.发布文章"></a>4.发布文章</h2><p>hexo博客文件夹中 source 下的 _posts 中默认只有一个 hello-world.md，使用MarkDown编辑器，这里我使用的是typora软件</p>
-<p>新建.md文件在第一行 右键 ==》 插入 ==》YAML Front Matter 输入title，作为文章标题</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title：我的第一篇博客</span><br></pre></td></tr></table></figure>
-
-<p>在博客文件夹下 右键 ==》 Git Bash Here  输入命令</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo g  -- 用于生成静态页面</span><br><span class="line">hexo s  -- 本地部署，完成后打开浏览器输入 localhost:4000 可以进行预览</span><br><span class="line">hexo d  -- 部署到远程仓库上，如 github</span><br></pre></td></tr></table></figure>
-
-<p>如果觉得页面不好看，可以到 hexo 主题网站上找到自己喜欢的主题进项更换，也可以根据自己的喜好美化页面。 </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://codejuntao.github.io/2019/04/05/我的第一篇博客文章/" data-id="ck1ykbu4n0000n8ji8o06g0yb" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
